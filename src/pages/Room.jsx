@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 
-function Room() {
+function Room() { 
     let {roomId} = useParams()
     function randomID(len) {
   let result = '';
@@ -16,8 +16,8 @@ function Room() {
   }
   return result;
 }
-  const appID = process.env.VITE_ZEGO_APP_ID;
-  const serverSecret = process.env.VITE_ZEGO_SERVER_SECRET;
+  const appID = 941201562;
+  const serverSecret = "18ac932255d5254b58a1fb1244cfc46a";
   const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomId,  randomID(5),  randomID(5));
  let myMeeting = async (element) => {
       // Create instance object from Kit Token.
