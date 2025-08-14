@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from './components/Footer.jsx'; 
 
 function Home() {
   const [roomId, setRoomId] = useState('');
@@ -14,6 +15,7 @@ function Home() {
   };
 
   return (
+    <>
     <div className='home-container'>
       <div className='home-card'>
         <h1 className='home-title'>Join a Live Stream</h1>
@@ -32,6 +34,8 @@ function Home() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
