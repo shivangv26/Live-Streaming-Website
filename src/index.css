@@ -33,14 +33,31 @@ body {
   width: 100%;
 }
 
+/* Home Card and Glowing Effect */
 .home-card {
   background-color: #fefefe;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 500px;
   width: 90%;
+  position: relative;
+  z-index: 1;
+  /* Glowing Effect - RGB corner shadows */
+  box-shadow: 
+    0 0 10px 5px rgba(255, 0, 0, 0), /* Red (top-left) */
+    0 0 10px 5px rgba(0, 255, 0, 0), /* Green (top-right) */
+    0 0 10px 5px rgba(0, 0, 255, 0), /* Blue (bottom-right) */
+    0 0 10px 5px rgba(255, 255, 0, 0); /* Yellow (bottom-left) */
+  transition: box-shadow 0.5s ease;
+}
+
+.home-card:hover {
+  box-shadow: 
+    0 0 20px 10px rgba(255, 0, 0, 0.5), /* Red */
+    0 0 20px 10px rgba(0, 255, 0, 0.5), /* Green */
+    0 0 20px 10px rgba(0, 0, 255, 0.5), /* Blue */
+    0 0 20px 10px rgba(255, 255, 0, 0.5); /* Yellow */
 }
 
 .home-title {
@@ -105,6 +122,7 @@ body {
 /* ... (existing styles from the previous response) ... */
 
 /* Footer Styles */
+
 .footer-container {
   width: 100%;
   padding: 20px;
